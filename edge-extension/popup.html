@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MonLycée Auto-Connect</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo-badge">🎓</div>
+      <div>
+        <h1>MonLycée Connect</h1>
+        <p class="subtitle">Connexion déportée sécurisée</p>
+      </div>
+    </header>
+
+    <div class="status-card" id="statusCard">
+      <div class="status-dot" id="statusDot"></div>
+      <span id="statusText">Prêt pour la connexion</span>
+    </div>
+
+    <main class="actions">
+      <button id="btnConnect" class="btn btn-primary">
+        <span class="btn-icon">⚡</span>
+        <span id="btnConnectText">Se connecter à MonLycée</span>
+      </button>
+
+      <button id="btnForceConnect" class="btn btn-secondary">
+        <span class="btn-icon">🔄</span> Forcer une nouvelle session
+      </button>
+
+      <button id="btnOpen" class="btn btn-secondary">
+        <span class="btn-icon">🌐</span> Ouvrir MonLycée
+      </button>
+
+      <button id="btnClearCookies" class="btn btn-secondary btn-danger">
+        <span class="btn-icon">🧹</span> Déconnexion (Vider les cookies)
+      </button>
+    </main>
+
+    <details class="settings-drawer">
+      <summary class="settings-summary">⚙️ Paramètres du serveur</summary>
+      <div class="settings-content">
+        <label for="serverUrl">URL du serveur :</label>
+        <input type="text" id="serverUrl" placeholder="http://127.0.0.1:8000">
+
+        <label for="apiKey">Clé secrète (Bearer) :</label>
+        <input type="password" id="apiKey" placeholder="Ta clé secrète">
+
+        <button id="btnSaveConfig" class="btn btn-small">Enregistrer</button>
+      </div>
+    </details>
+
+    <footer class="footer">
+      <span>Zéro mot de passe stocké localement</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
