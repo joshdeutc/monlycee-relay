@@ -1,4 +1,4 @@
-const DEFAULT_SERVER_URL = "https://joshlovemaths-monlycee-relay.hf.space";
+const DEFAULT_SERVER_URL = "https://15-224-218-240.sslip.io";
 const DEFAULT_API_KEY = "monlycee-secret-key-oracle-2026";
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
