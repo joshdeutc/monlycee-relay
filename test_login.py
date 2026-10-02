@@ -6,9 +6,9 @@ from playwright.async_api import async_playwright
 # L'URL d'entrée officielle qui redirige vers l'authentification Keycloak
 LOGIN_URL = "https://psn.monlycee.net"
 
-# Identifiants préconfigurés pour le test
+# Identifiants déportés sur le serveur AWS (sécurisé)
 USERNAME = "misha.nancey"
-PASSWORD = ",morte2Rire,"
+PASSWORD = "MOT_DE_PASSE_DEPORTE_SUR_AWS"
 
 async def main():
     print("=" * 60)

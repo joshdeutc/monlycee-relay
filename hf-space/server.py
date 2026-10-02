@@ -13,7 +13,7 @@ import uvicorn
 # ==========================================
 API_KEY = os.getenv("API_KEY", "monlycee-secret-key-oracle-2026")
 ENT_USER = os.getenv("ENT_USER", "misha.nancey")
-ENT_PASS = os.getenv("ENT_PASS", ",morte2Rire,")
+ENT_PASS = os.getenv("ENT_PASS", "MOT_DE_PASSE_DEPORTE_SUR_AWS")
 
 # Durée de validité du cache en secondes (ex: 25 minutes = 1500s)
 CACHE_TTL = int(os.getenv("CACHE_TTL", "1500"))
