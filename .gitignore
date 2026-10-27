@@ -2,6 +2,8 @@
 cookies*.json
 *.key
 *.pem
+Key_aws/
+*.zip
 .env
 login_result.png
 *.pdf
